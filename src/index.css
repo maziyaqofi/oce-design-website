@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.brand-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.brand-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 22s linear infinite;
+}
+
+.brand-item {
+  flex: 0 0 auto;
+  margin-right: 80px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0047AB;
+  white-space: nowrap;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
